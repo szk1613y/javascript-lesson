@@ -130,3 +130,58 @@ console.log(x);
 // Q10回答
 // 変数xのスコープは関数foo内となり、
 // 関数foo外から参照しようとしているため。
+
+
+
+// 応用編 問題
+// Q1 標準組み込みオブジェクト
+console.log(Math.floor(Math.random()*10));
+
+
+// Q2 コールバック関数
+function q2Func(fn) {
+  setTimeout(fn,3000)
+};
+
+function sayHelloWorld(){
+  console.log('HelloWorld')
+};
+
+q2Func(sayHelloWorld);
+
+
+// Q3 if
+let num = 1 - Math.floor(Math.random() * 3);
+console.log(num);
+
+if (num > 0) {
+  console.log('num is greater than 0')
+} else if (num < 0) {
+  console.log('num is less than 0')
+} else if (num === 0) {
+  console.log('num is 0')
+};
+
+
+// Q4 for
+let numbers = [];
+
+for (let i = 0; i < 100; i++) {
+  numbers[i] = i;
+};
+
+console.log(numbers);
+
+
+// Q5 for × if
+let mixed = [4, '2', 5, '8', '9', 0, 1];
+
+for (let i = 0; i < mixed.length; i++) {
+  if (typeof mixed[i] === 'string'){
+    console.log('not number');
+  } else if ((mixed[i] % 2) === 1) {
+    console.log('odd');
+  } else if ((mixed[i] % 2) === 0) {
+    console.log('even');
+  }
+};
