@@ -88,15 +88,15 @@ calc.add = function(x, y){
   console.log(x + y);
 };
 
-calc.subtract = function(){
+calc.subtract = function(x, y){
   console.log(x - y);
 };
 
-calc.multiply = function(){
+calc.multiply = function(x, y){
   console.log(x * y);
 };
 
-calc.divide = function(){
+calc.divide = function(x, y){
   console.log(x / y);
 };
 
